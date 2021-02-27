@@ -3,37 +3,164 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pet Pals!</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Enrollment Predictor</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="style.css" media="screen" />
+
+
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="matt.html">
+                        <h2>Matt</h2>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tina.html">
+                        <h2>Tina</h2>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="monicah.html">
+                        <h2>Monicah</h2>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="predictor.html">
+                        <h2>Enrollment Predictor</h2>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- End of navbar -->
+
+
 </head>
 
 <body>
     <div class="container">
-        <div class="jumbotron" style="text-align: center">
-            <h1>Pet Pal</h1>
-            <p>Find your pet a pal!</p>
+        <div class="jumbotron" style="color: #1C2833">
+            <h1 style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif">
+                So, You Want To Go To College?
+            </h1>
+            <p></p>
         </div>
 
         <div class="row">
-            <div class="col-md-12">
-                <h2>Look at all of the current pet pals!</h2>
-                <div id="plot"></div>
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-body" style="color: whitesmoke">
+                        <h2 style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif"><strong>Project
+                                Overview</strong></h2>
+                    </div>
+                </div>
+                <div class="company">
+                    <p style="color: whitesmoke">University Enrollment and Graduation Rate Prediction Using Multiple
+                        Linear Regression
+                        In this project, we will train regression models to find the probability of being enrolled at a
+                        college or university.
+                        In this project we will go through the following tasks:
+                        <br>
+                        <br>
+                        (1) Understand the Problem Statement
+                        <br>
+                        (2) Import libraries and datasets
+                        <br>
+                        (3) Perform Exploratory Data Analysis
+                        <br>
+                        (4) Perform Data Visualization
+                        <br>
+                        (5) Create Training and Testing Datasets
+                        <br>
+                        (6) Train and Evaluate a Linear Regression Model
+                        <br>
+                        (7) Train and Evaluate an Artificial Neural Network Model
+                        <br>
+                        (8) Train and Evaluate a Random Forest Regressor and Decision Tree Model
+                        <br>
+                        <br>
+                        Apply Python libraries to import and visualize dataset.
+                        Perform exploratory data analysis
+                        Understand the distribution and relationship of data
+                        Split and Standardize training and testing dataset
+                        Train various regression models using Scikit-Learn
+                        Train Artificial Neural Network models to perform regression tasks
+                        Evaluate, compare and analyze the performance of different regression models
+                        <br>
+                    </p>
+                </div>
             </div>
-        </div>
+            <!--end of first col-->
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body" style="color: whitesmoke">
+                        <p><strong>What Are Your Chances Of Being Enrolled?</strong></p>
+                    </div>
+                    <img src="correlation.png" alt="Correlation Matrix" class="img-responsive"
+                        style="width: 100%; height: 300px" />
+                    <p style="padding-top:15px; padding-left: 10px; color: whitesmoke">Lorem Ipsum is simply dummy text
+                        of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                        make a type specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                        the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-        <div class="row">
-            <div class="col-md-12">
-                <h2><a href="/send">Add your pet here!</a></h2>
+                    </p>
+                </div>
             </div>
+            <!--end of second column-->
         </div>
+        <!--end of row-->
+
+        <!--tableau visuals-->
+        <div class='tableauPlaceholder' id='viz1614391610186' style='position: relative'><noscript><a href='#'><img
+                        alt=' '
+                        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;en&#47;enrollment_and_graduation_rate6&#47;EnrollmentStory&#47;1_rss.png'
+                        style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='enrollment_and_graduation_rate6&#47;EnrollmentStory' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image'
+                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;en&#47;enrollment_and_graduation_rate6&#47;EnrollmentStory&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en' />
+                <param name='filter' value='publish=yes' />
+            </object></div>
+        <script
+            type='text/javascript'>                    var divElement = document.getElementById('viz1614391610186'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '1016px'; vizElement.style.height = '991px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    </div>
+    </div>
+    </div>
 </body>
 
 </html>
