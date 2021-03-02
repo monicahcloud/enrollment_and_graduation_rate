@@ -1,80 +1,60 @@
-# import necessary libraries
-from models import create_classes
-import os
-from flask import (
-    Flask,
-    render_template,
-    jsonify,
-    request,
-    redirect)
-
+from joblib import load
+import json
+import numpy as np
+from flask import Flask, jsonify, render_template, url_for, request
+import pickle
 #################################################
 # Flask Setup
 #################################################
 app = Flask(__name__)
-
 #################################################
-# Database Setup
+# Flask Routes
 #################################################
-
-from flask_sqlalchemy import SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///db.sqlite"
-
-# Remove tracking modifications
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-db = SQLAlchemy(app)
-
-Pet = create_classes(db)
-
-# create route that renders index.html template
+#################################################
+# HTML ROUTES
 @app.route("/")
 def home():
     return render_template("index.html")
+# @app.route("/treatment")
+# def treatment():
+#     return render_template("treatment.html")
+@app.route("/predictor")
+def test():
+    return render_template("predictor.html")
+@app.route("/results", methods=["POST", "GET"])
+def results():
+    print("hello")
+    if request.method=="POST":
+    # read data, do for each question, make sure the features are in correct order
+        gre = int(request.form['gre'])
+        print('gre')
+        toefl = int(request.form['toefl'])
+        rating = int(request.form['rating'])
+        gpa = float(request.form['gpa'])
+        research = int(request.form['research'])
+    
+        # user input list
+        features = [gre, toefl , rating, gpa, research]
+        final_features = [np.array(features)]
+        final_shape = np.reshape(final_features,(1,-1))
+        # load model
+        # model = load('model.sav')
+        with open('model.pkl', 'rb') as file:
+            model = pickle.load(file)
 
+        prediction = model.predict(final_shape)
+        print(prediction)
 
-# Query the database and send the jsonified results
-@app.route("/send", methods=["GET", "POST"])
-def send():
-    if request.method == "POST":
-        name = request.form["petName"]
-        lat = request.form["petLat"]
-        lon = request.form["petLon"]
-
-        pet = Pet(name=name, lat=lat, lon=lon)
-        db.session.add(pet)
-        db.session.commit()
-        return redirect("/", code=302)
-
-    return render_template("form.html")
-
-
-@app.route("/api/pals")
-def pals():
-    results = db.session.query(Pet.name, Pet.lat, Pet.lon).all()
-
-    hover_text = [result[0] for result in results]
-    lat = [result[1] for result in results]
-    lon = [result[2] for result in results]
-
-    pet_data = [{
-        "type": "scattergeo",
-        "locationmode": "USA-states",
-        "lat": lat,
-        "lon": lon,
-        "text": hover_text,
-        "hoverinfo": "text",
-        "marker": {
-            "size": 50,
-            "line": {
-                "color": "rgb(8,8,8)",
-                "width": 1
-            },
-        }
-    }]
-
-    return jsonify(pet_data)
-
-
-if __name__ == "__main__":
-    app.run()
+        if prediction == 1:
+            return render_template("yes.html")
+        else:
+            return render_template("no.html")
+        return render_template('predictor.html')
+    else: 
+        print("this gotta work")
+        return render_template("predictor.html")
+# @app.route("/analytics")
+# def analytics():
+#     return render_template("analytics.html")
+if __name__ == '__main__':
+    app.run(debug=True)
