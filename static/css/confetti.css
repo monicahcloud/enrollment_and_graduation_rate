@@ -9,6 +9,10 @@ div.marquee {
   -webkit-animation: flyby 15s linear infinite;
   animation: flyby 15s linear infinite;
 }
+#sky{ 
+  position: absolute; 
+  z-index:-1;
+}
 @-webkit-keyframes flyby {
   from {
       left: 640px;
@@ -35,4 +39,29 @@ div.marquee div {
   font: small-caps bold 18px Optima, Futura, sans-serif;
   background: orange;
   padding: 2px 10px;
+}
+.box-left-mini{
+  float:left;
+  background-image:url(website-content/hotcampaign.png);
+  width:292px;
+  height:141px;
+}
+
+.box-left-mini .front {
+  display: block;
+  z-index: 5;
+  position: relative;
+}
+.box-left-mini .front span {
+  background: #fff
+}
+
+.box-left-mini .behind_container {
+  background-color: #ff0;
+  position: relative;
+  top: -18px;
+}
+.box-left-mini .behind {
+  display: block;
+  z-index: 3;
 }

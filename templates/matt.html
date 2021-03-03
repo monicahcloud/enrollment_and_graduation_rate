@@ -16,46 +16,101 @@
 
     <!-- Start of navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="matt.html">
-                      <h2>Matt</h2>
-                  </a>
-              </li>
-              <!-- <li class="nav-item">
-                  <a class="nav-link" href="tina.html">
-                      <h2>Tina</h2>
-                      <span class="sr-only">(current)</span>
-                  </a>
-              </li> -->
-              <li class="nav-item">
-                  <a class="nav-link" href="monicah.html">
-                      <h2>Monicah</h2>
-                      <span class="sr-only">(current)</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="predictor.html">
-                      <h2>Enrollment Predictor</h2>
-                      <span class="sr-only">(current)</span>
-                  </a>
-              </li>
-              
-          </ul>
-      </div>
-  </nav>
-  <!-- End of navbar --> 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/enrollment">
+                        <h3>Enrollment Data</h3>
+                    </a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="/analytics">
+                        <h3>Machine Learning</h3>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/predictor">
+                        <h3>Admissions Predictor</h3>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
 
-  
+            </ul>
+        </div>
+    </nav>
+    <!-- End of navbar -->
+
 </head>
 <body>
-    
+    <br>
+    <div class="container" style="color: whitesmoke">
+        <div class="row">
+            <h3 >Embarking on the college journey is the dream for numerous high school students, although the reason for attending can be extremely varied. Some students base their decisions on economic factors, some on campus life, and others, simply on prestige. On this page, we are narrowing down our data to explore what it takes to get accepted and enroll into some of the top universities in the nation.</h3>
+            <div class="col">
+            <br><br>
+                   </div>
+          <br>
+    <div class="container" style="color: whitesmoke">
+        <div class="row">
+            HBCUs are a rich part of U.S. history, and have produced some of the most brilliant minds to have ever blessed this country. In this chart, we are illustrating the acceptance and enrollment rates of the top HBCUs in the country; based on combined math and critical reading scores averaging 600 and above.
+          <div class="col">
+            <br><br>
+            <img
+            src="../static/images/high_scores.png"
+            alt="Correlation Matrix"
+            class="img-responsive col-md-10"
+            style="width: 75%; height: 500px;"
+          />
+          </div>
+          
+        </div>
+        <br>
+        <div class="row">
+            A university’s prestige is an immensely important attribute when it comes to school selection. Certain universities and colleges uphold reputations that are synonymous with success. In this chart, we are analyzing the enrollment and acceptance rates of the top universities in the nation; based on combined math and critical reading SAT scores averaging 780 and above.
+          <div class="col"><br>
+            <img
+            src="..\static\images\top_univ.png"
+            alt="Correlation Matrix"
+            class="img-responsive col-md-20"
+            style="width: 75%; height: 500px;"
+          />
+          </div>
+          
+        </div>
+        <br>
+        <div class="row">
+            In Georgia, unfortunately, the school system is not touted as one of the most premier in the nation, but that is not to say we do not have a plethora of great universities and colleges throughout the state. This chart is an illustration of the enrollment and acceptance rates of the top universities in Georgia, based on math and critical reading SAT scores averaging 600 and above. <div class="col">
+                <br>
+                <img
+            src="..\static\images\sr1.png"
+            alt="Correlation Matrix"
+            class="img-responsive col-md-20"
+            style="width: 75%; height: 500px;"
+          />
+          </div>
+<br><br>
+          <div class="row">
+            <br>
+            For students and faculty, the admissions process can be extremely arduous and sometimes stressful, but after getting admitted what are the most important factors that go into a student’s decision to enroll in a university. Considering the current issue with student debt in our country, costs would seem to be one of, if not the most important factor to consider when enrolling in school. In this chart, we are analyzing whether there is a correlation between a university’s tuition and fees and their enrollment rate.
+
+            <br><br>
+            <img
+            src="..\static\images\tuiition1.png"
+            alt="Correlation Matrix"
+            class="img-responsive col-md-20"
+            style="width: 75%; height: 500px;"
+          />
+          </div>
+      </div>
+      
+
 </body>
 </html>
