@@ -66,11 +66,16 @@
     <div class="col-md-8">
       <div class="panel panel-default">
         <div class="panel-body" style="color: whitesmoke">
-          <!-- <h2><strong>Probability of College Admissions</strong></h2> -->
+          <h2><strong>     Probability of College Admissions</strong></h2>
+          <img
+          src="../static/images/college-admissions.jpg"
+          alt="Correlation Matrix"
+          class="img-responsive col-md-8"
+        />
         </div>
         <br />
         
-        <div class="description" style="color: whitesmoke">
+        <div class="description col-md-8" style="color: whitesmoke">
           <h3>
             <strong>
               Graduate Admission Prediction Using Machine Learning</strong
@@ -113,45 +118,69 @@
     <div class="col-md-8">
       <div class="panel panel-default">
         <div class="panel-body" style="color: whitesmoke">
-          <h2><strong>Summary of Dataset</strong></h2>
+          <h2><strong>Visualization Summary of Dataset</strong></h2>
         </div>
+        <div class="col-md-10"style="color: whitesmoke">
+          <h4><strong>Correlation Matrix</strong></h4>
         <img
-          src="../static/images/correlation.png"
+          src="../static/images/admissions_correlation_matrix.png"
           alt="Correlation Matrix"
           class="img-responsive"
+          style="width: 100%; height: 500px; background: white"
         />
         <p style="padding-top: 15px; padding-left: 10px; color: whitesmoke">
           Heat maps gives a decent pictorial portrayal of the connection of
           highlights to our objective worth possibility of concede to college.
         </p>
       </div>
+      <div class="col-md-10"style="color: whitesmoke">
+        <h4><strong>ScatterPlot Matrix</strong></h4>
+      <img
+        src="../static/images/scattermatrix.png"
+        alt="Correlation Matrix"
+        class="img-responsive"
+        style="width: 100%; height: 500px; background: white"
+      />
+      <p style="padding-top: 15px; padding-left: 10px; color: whitesmoke">
+        Heat maps gives a decent pictorial portrayal of the connection of
+        highlights to our objective worth possibility of concede to college.
+      </p>
     </div>
+    <div class="col-md-10"style="color: whitesmoke">
+      <h4><strong>Correlation Histogram</strong></h4>
+    <img
+      src="../static/images/admissions_hist.png"
+      alt="Correlation Matrix"
+      class="img-responsive"
+      style="width: 100%; height: 500px; background: white"
+    />
+    <p style="padding-top: 15px; padding-left: 10px; color: whitesmoke">
+      Heat maps gives a decent pictorial portrayal of the connection of
+      highlights to our objective worth possibility of concede to college.
+    </p>
+  </div>
+    </div>
+  </div>
 
     <div class="col-md-8">
       <div class="panel panel-default">
         <div class="panel-body" style="color: whitesmoke">
           <br />
           <br />
-          <h3>
+          <h4>
             <strong
               >Target of an aspirant would be get more than the mean scores
               displayed below.</strong
             >
-          </h3>
-        </div>
+          </h4>
+        
         <img
-          src="../static/images/correlation_display.jpg"
+          src="../static/images/target_scores.png"
           alt="Correlation Matrix"
           class="img-responsive"
           style="width: 75%; height: 150px"
-        />
-        <p style="padding-top: 15px; padding-left: 10px; color: whitesmoke">
-          We can see that CGPA,GRE,TOEFL,University Ranking has the highest
-          correlation with the chance of admission to the university.The other
-          parameters like SOP,LOR and Research has less impact on the chance of
-          admission.We can dropt he column Srno from our dataframe as it doesnt
-          have any impact on the chance of admission.
-        </p>
+        /></div>
+       
       </div>
     </div>
     <br />
@@ -163,26 +192,28 @@
           </h3>
         </div>
         <img
-          class="col-md-8"
+          class="col-md-8" 
+          
           src="../static/images/studentresearch.jpg"
           alt="Correlation Matrix"
           class="img-responsive"
-          style="width: 75%; height: 300px"
+          style="width: 100%; height: 300px ; background: white"
         />
         <p
           style="padding-top: 15px; padding-left: 10px; color: whitesmoke"
           class="col-md-8"
         >
-          We can see that 55% Students have done Research. It possible only the
-          better student could get a chance for doing research. Doing research
+          55% of students have research experience. Doing research
           does add practical knowledge and increases the student skill of
           working with groups or teams.
         </p>
-
-        <br />
+<div  class="panel-body" style="color: whitesmoke" >
+        <h3 >
+          <strong>How important are GRE and TOEFL Scores to get an Admission?</strong>
+        </h3>
         <img
           class="col-md-8"
-          src="../static/images/gre_toefl_scatterplot.png"
+          src="../static/images/gre_toefl_scatterplot2.png"
           alt="Correlation Matrix"
           class="img-responsive"
           style="width: 200%; height: 500px"
@@ -191,9 +222,10 @@
           style="padding-top: 15px; padding-left: 10px; color: whitesmoke"
           class="col-md-8"
         >
-          We can clearly see that students with higher GRE and TOEFL scores have
+          Students with higher GRE and TOEFL scores have
           a very high chance of getting an university admission.
         </p>
+      </div>
       </div>
     </div>
     <div class="col-md-8">
@@ -206,17 +238,17 @@
               >Machine Learning Models</strong
             >
           </h2>
-          <h3>
+          <h4>
             <strong
               >Predicted Vs Actual Values</strong
             >
-          </h3>
+          </h4>
         
         <img
           src="../static/images/chance_vs_actual.png"
           alt="Correlation Matrix"
           class="img-responsive"
-          style="width: 100%; height: 500px; background: white"
+          style="width: 75%; height: 300px; background: white"
         />
         <p style="padding-top: 15px; padding-left: 10px; color: whitesmoke">
           We can see from the above plot that we have fairly good correlation.
@@ -229,7 +261,7 @@
           src="../static/images/random_forest_feature_importance.png"
           alt="Correlation Matrix"
           class="img-responsive "
-          style="width: 100%; height: 500px; background: white"
+          style="width: 75%; height: 300px; background: white"
         />
         <p style="padding-top: 15px; padding-left: 10px; color: whitesmoke">
           GPA, GRE Scores, and TOEFL Scores are most important features in the data set

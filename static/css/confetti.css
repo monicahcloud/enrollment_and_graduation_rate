@@ -1,4 +1,4 @@
-body {
+body { 
   background: black;
   background: linear-gradient(to bottom, black, rgba(0,0,99,0) 400%);
 }
